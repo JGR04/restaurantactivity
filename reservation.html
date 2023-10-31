@@ -1,0 +1,186 @@
+<html>
+<head>
+    <title>Reach Us</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css"> 
+*{
+	box-sizing: border-box;
+}
+header{
+    text-align: center;
+    margin: 40px;
+    font-size: 40px;
+    font-family: Georgia;
+    color: #ffffff;
+    border: 3px solid;
+}
+body{
+	background: skyblue;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: large;
+}
+
+#nav-link{
+	text-align: center;	
+}
+#nav-link ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+	overflow: hidden;
+	background-color: rgb(202, 230, 246);
+	border-radius: 20px;
+}
+#nav-link li{
+	float: left;
+}
+#nav-link li a{
+	display: block;
+	color: blue;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border-radius: 15px;
+}
+#nav-link li a:hover:not(.active){
+	background-color: #280077;
+	color: white;
+}
+.active{
+	background-color: #5a6df8;
+}
+
+#resForm{
+	background-color: white;
+	margin: 100px auto;
+	padding: 50px;
+	width: 70%;
+	min-width: 300px;
+	text-align: center;
+	border-radius: 15px;
+	font-family: Courier;
+}
+
+input {
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: 12px 20px;
+	margin: 8px;
+	display: inline-block;
+	box-sizing: border-box;
+	font-style: italic;
+}
+button{
+	background-color: #280077;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+button:hover{
+	opacity: 0.7;
+}
+
+.data {
+	padding: 20px;
+}
+label{
+	color: black;
+	float: left;
+}
+.dashed {
+	outline-color: red;
+	outline-style: dashed;
+}
+
+
+
+
+    </style>
+
+</head>
+<body>
+	<header>
+			<h1>FASTFOOD</h1>
+			<p><i>"Feel the fragrance from far away place."</i></p>
+		 
+	</header>
+		<div id= "nav-link">
+	
+			<nav>
+			<ul>
+				<li><a href="index.html"><h3>Home</h3></a></li>
+				<li><a href= "about.html"><h3>About</h3></a></li>
+				<li><a href= "order.html"><h3>Order</h3></a></li>
+				<li><a class="active" href= "reservation.html" style="color: white;"><h3>Reservation</h3></a></li>
+				<li><a href="news.html"><h3>News</h3></a></li>
+			</ul>
+			</nav>
+	
+	</div>
+	
+	<h1 style="text-align: center; font-family: Courier; margin-top: 40px; color: white; font-size: 50px;">Reservation Form</h1>
+	<form id="resForm" action="#" method="post">
+		<div class="userimage">
+			<img src="customer.png" alt="customer" style="height: 50px; width: 50px;" class="avatar">
+		</div>
+		<div class="data">
+			<label><b>Complete Name</b></label>
+			<input type="text" placeholder="Enter First Name" required>
+			<input type="text" placeholder="Enter Last Name" required>
+
+			<label><b>Contact</b></label>
+			<input type="text" placeholder="Phone Number" required>
+			<input type="text" placeholder="Telephone Number" required>
+
+			<label type="text"><b>Email Address</b></label>
+			<input type="text" placeholder="Enter Username" required>
+			<input type="password" placeholder="Enter Password" required>
+
+			<label><b>Other details:</b></label>
+			<input type="text" placeholder="Enter the number of guests" required>
+			<input type="text" placeholder="Time of Event (e.g., 00:00.00)"  required>
+			<input type="text" placeholder="Date of Event (e.g., dd/mm/yyyy)" required>
+			<input type="text" placeholder="Type of Event" required>
+
+			<label><b>Beverages: </b></label>
+			<input type="text" placeholder="e.g., 5 - Milk Tea, ...">
+
+			<label><b>Foods:</b></label>
+			<input type="text" placeholder="e.g., 5 - Hamburger , ...">
+			
+			<label><b>Notes:</b></label>
+			<input type="text" placeholder="Please enter the details of the dishes to be serve....">
+
+			
+			<!-- button of the terms and policy-->
+			<button type="button" class="open-button" style="font-weight: lighter; font-family: Courier; border-radius: 10px; background-color: red;">Restaurant Policy</button>
+
+			<!--the policies-->
+			<div class="dashed">
+				<form>
+					<h1>Restaurant Policies</h1>
+
+
+					<h2>Payment Policy:</h2>
+					<p>50% payment must be paid before the reservation date. Full payment is due on the day of the event.</p>
+
+					<h2>Reservation Cancellation:</h2>
+					<p>The cancellation of reservation after 3 days of prior to the scheduled date, you are elligible for a refund. </p>
+
+					<button type="button" class="btn cancel" onclick="alert('Further animation is beyond the subject. Please be considerate and Thank you.')" style="font-weight: lighter; font-family: Courier; border-radius: 10px; background-color: red;">Close</button>
+				</form>
+			</div>
+
+			<button type="submit" style="font-weight: lighter; font-family: Courier; border-radius: 10px;">Submit</button> 
+
+		</div>
+	</form>
+	
+
+			
+</body>
+</html>

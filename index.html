@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+	<title>FastFood</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+<style type="text/css">
+
+
+*{
+	box-sizing: border-box;
+}
+.sign-up h1 {
+	display: inline-block;
+	font-family: Times;
+	color: #ffffff;
+	margin: 5px;
+}
+.sign-up{
+	outline-style: double;
+	margin: 5px;
+	outline-color: #ffffff;
+	text-align: center;
+}
+.sign-up input{
+	border-radius: 5px;
+	border: #5a6df8;
+	padding: 15px;
+	font-family: Courier;
+	text-align: center;
+	margin: 5px;
+}
+.sign-up button{
+	border-radius: 5px;
+	padding: 15px;
+	font-family: Courier;
+	background-color: lightgrey;
+}
+.clock{
+	text-align: center;
+	font-family: Times;
+	padding: 5px;
+}
+.title{
+	background: rgb(182, 193, 223);
+}
+button {
+	width: 10%;
+	background: #ffffff;
+	margin-top: 20px;
+	text-align: center;
+}
+
+header{
+	background: center;
+	padding: 30px;
+	text-align: center;
+	font-size: 30px;
+	color: white;
+	border-radius: 20px;
+}
+
+#nav-link{
+	text-align: center;
+}
+#nav-link ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+	overflow: hidden;
+	background-color: rgb(202, 230, 246);
+	border-radius: 10px;
+}
+#nav-link li{
+	float: left;
+}
+#nav-link li a{
+	display: block;
+	color: blue;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+#nav-link li a:hover:not(.active){
+	background-color: #280077;
+	color: white;
+}
+.active{
+	background-color: #5a6df8;
+}
+
+body{
+	background: skyblue;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: large;
+}
+/*Creates two boxes that float to each other*/
+h4 {
+	float: left;
+	width: 20%;
+	padding: 20px;
+	background: #ccc;
+	border-radius: 5px;
+	height: 700px;
+}
+
+/* Clear floats after the columns */
+body::after{
+	content: "";
+	display: table;
+	clear: both
+}
+.foods{
+	font-size: 20px;
+	text-align: center;
+	grid-row: 1;
+	grid-column: 1 / span 4;
+}
+.drinks{
+	font-size: 20px;
+	text-align: center;
+	grid-row: 1;
+	grid-column: 5 / span 2;
+}
+.food1{
+	grid-column: 1;
+	grid-row: 2;
+}
+.drink1{
+	grid-row: 2;
+	grid-column: 5;
+}
+.drink2{
+	grid-row: 2;
+	grid-column: 6;
+}
+.drink3{
+	grid-row: 3;
+	grid-column: 5;
+}
+.drink4{
+	grid-row: 3;
+	grid-column: 6;
+}
+.drink5{
+	grid-row: 4;
+	grid-column: 5;
+}
+.drink6{
+	grid-row: 4;
+	grid-column: 6;
+}
+.drink7{
+	grid-row: 5;
+	grid-column: 5 / span 2;
+}
+.grid-container{
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
+	gap: 10px;
+	background-color: lightblue;
+	padding: 10px;
+	text-align: center;
+}
+
+.grid-container div {
+	background-color: skyblue;
+	color: blue;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 30px;
+}
+
+
+
+/*Responsive Layout*/
+@media (max-width: 600px){
+	nav, article{
+		width: 100%;
+		height: auto;
+	}
+}
+
+
+</style>
+</head>
+
+	
+<body>
+
+	<div class= "sign-up">
+		<h1>Email: </h1>
+		<input type= "text" placeholder= "Enter Username">
+		<h1>Password: </h1>
+		<input type= "password" placeholder= "Enter Password">
+		<button onclick="alert('This page is under evaluation. Please wait for the upcoming updates. Thank you.')">Sign Up</button>
+	</div>
+
+	<header>
+		<div class="title">
+			<h1> <hr><em>All-in-One FastFood</em><hr></h1>
+			
+			<img src="header.png" width="100%" border-radius="20px">
+			<h2> <hr> <i>Just Click And Ready to Serve.</i> <hr></h2>
+			</div>
+
+		<div id= "nav-link">
+
+			<nav>
+			<ul>
+				<li><a class="active" href="#" style="color: white;"><h3>Home</h3></a></li>
+				<li><a href= "about.html"><h3>About</h3></a></li>
+				<li><a href= "order.html"><h3>Order</h3></a></li>
+				<li><a href= "reservation.html"><h3>Reservation</h3></a></li>
+				<li><a href="news.html"><h3>News</h3></a></li>
+			</ul>
+			</nav>
+	</div>	
+</header>
+	
+<div class="grid-container">
+	<div class="foods"><h1>Foods</h1></div>
+	<div class="drinks"><h1>Beverages</h1></div>
+	<div class="food1">Hamburger</div>
+	<div class="food2">Cheeseburger</div>
+	<div class="food3">Sandwich</div>
+	<div class="food4">Muffin</div>
+	<div class="food5">Burrito</div>
+	<div class="food6">Cookies</div>
+	<div class="food7">Hotdog</div>
+	<div class="food8">Fried Chicken</div>
+	<div class="food9">Donuts</div>
+	<div class="food10">Baguette</div>
+	<div class="food11">Pizza</div>
+	<div class="food12">Onion Rings</div>
+	<div class="food13">Sausage</div>
+	<div class="food14">Pretzel</div>
+	<div class="food15">Pancake</div>
+	<div class="food16">Bacon</div>
+	<div class="food17">Fries</div>
+	<div class="food18">Noodle</div>
+	<div class="drink1">Coke</div>
+	<div class="drink2">Pepsi</div>
+	<div class="drink3">Sprite</div>
+	<div class="drink4">Royal</div>
+	<div class="drink5">Mountain Dew</div>
+	<div class="drink6">Milk Shake</div>
+	<div class="drink7">Milk Tea</div>
+
+</div>
+
+</body>
+
+</html>

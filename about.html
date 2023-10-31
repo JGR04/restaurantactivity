@@ -1,0 +1,158 @@
+<html>
+<head>
+    <title>About</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+* {
+    box-sizing: border-box;
+}
+head{
+    background-color: #f1dbdb;
+}
+header{
+    text-align: center;
+    margin: 40px;
+    font-size: 40px;
+    font-family: Georgia;
+    color: #ffffff;
+    border: 3px solid;
+}
+body{
+	background: skyblue;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: large;
+}      
+#nav-link{
+	text-align: center;
+}
+#nav-link ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+	overflow: hidden;
+	background-color: rgb(202, 230, 246);
+    border-radius: 10px;
+}
+#nav-link li{
+	float: left;
+}
+#nav-link li a{
+	display: block;
+	color: blue;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+    border-radius: 10px;
+}
+.leftcolumn{
+    float: left;
+    width: 75%;
+}
+.rightcolumn{
+    float: left;
+    width: 25%;
+    background-color: lightskyblue;
+    padding-left: 20px;
+}
+.box{
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.left:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#nav-link li a:hover:not(.active){
+	background-color: #280077;
+    color: white;
+}
+.active{
+	background-color: #5a6df8;
+}
+.footer{
+    padding: 20px;
+    text-align: center;
+    margin-top: 5px;
+    background: #ddd;
+    font-size: medium;
+    font-family: Times;
+}
+.footer img{
+    margin: 70px;
+}
+@media screen and (max-width:800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    } 
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>FASTFOOD</h1>
+        <p><i>"Feel the fragrance from far away place."</i></p>
+     
+    </header>
+
+    <div id= "nav-link">
+        <nav>
+        <ul>
+            <li><a href="index.html"><h3>Home</h3></a></li>
+            <li><a class="active" href= "about.html" style="color: white;"><h3>About</h3></a></li>
+            <li><a href= "order.html"><h3>Order</h3></a></li>
+            <li><a href= "reservation.html"><h3>Reservation</h3></a></li>
+            <li><a href="news.html"><h3>News</h3></a></li>
+            <li><a href="#" style="float: right;"><h3>My Facebook</h3></a></li>
+        </ul>
+        </nav>
+    </div>
+
+    <div class="left">
+        <div class="leftcolumn">
+            <div class="box">
+                <h1> J&J FastFood</h1>
+                <h5>October 13, 2023</h5>
+
+                <p>J&J Restaurant, also known as FastFood, is a newly-established business that holds appropriate values in a growing society.
+                    J&J Restaurant serves customers with snack foods, soups, and drinks. Ideally, enjoy the day of fast food with a smile.
+                    J&J Restaurant is socially constructed to be interactive on social media platforms, considering the time, place, and well-being of our customers while being far away from our restaurant.</p>
+            </div>
+            <div class="box">
+                <h1>The inspiring story of one of the Co-Founder of the J&J FastFood</h1>
+                <h5>October 13, 2023</h5>
+
+                <p>Jun Mc Win G. Rollorata, a tardy person becomes successful after acquiring inspirational remarks.</p>
+            </div>
+        </div>
+            <div class="rightcolumn">
+            <div class="box">
+                <h1>My Profile</h1>
+                <img src="user.png" style="width: 100px; height: 125px;">
+                <h3><i>Jun Mc Win G. Rollorata</i></h3>
+                <h3><i>BSCS-1</i></h3>
+                <h3><i>College of Computing and Information Sciences</i></h3>
+                <h3><i>Caraga State University</i></h3>
+            </div>
+        </div>
+
+
+    <div id="footer" class="footer">
+        <img src="logo.png" alt="logo" width="250px">
+        <h3 style="font-family: monospace; margin: 2px; font-size: 20px;"> About Us</h3>
+        <img src="facebook.png" width="50px">
+        <img src="youtube.png" width="50px">
+        <img src="instagram(1).png" width="50px">
+        <img src="tiktok.png" width="50px">
+        <img src="twitter.png" width="50px">
+        <p><i>Made by Jun Mc Win Rollorata.</i></p>
+        
+    </div>
+</body>
+</html>

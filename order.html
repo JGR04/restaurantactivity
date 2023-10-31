@@ -1,0 +1,572 @@
+<html>
+<head>
+    <title>Order</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css"> 
+*{
+	box-sizing: border-box;
+}
+header{
+    text-align: center;
+    margin: 40px;
+    font-size: 40px;
+    font-family: Georgia;
+    color: #ffffff;
+    border: 3px solid;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+#nav-link{
+	text-align: center;
+}
+#nav-link ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+	overflow: hidden;
+	background-color: rgb(202, 230, 246);
+	border-radius: 10px;
+}
+#nav-link li{
+	float: left;
+}
+#nav-link li a{
+	display: block;
+	color: blue;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border-radius: 10px;
+}
+#nav-link li a:hover:not(.active){
+	background-color: #280077;
+	color: white;
+}
+.active{
+	background-color: #5a6df8;
+}
+body{
+	background: skyblue;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: large;
+}     
+
+.tab{
+	float: left;
+	border: 1px solid white;
+	background-color: lightblue;
+	width: 25%;
+	margin-top: 10px;
+}
+.tab button{
+	display: block;
+	background-color: inherit;
+	color: black;
+	padding: 20px 60px;
+	width: 100%;
+	border: none;
+	cursor: pointer;
+	transition: 0.5s;
+	font-size: 20px;
+	text-align: center;
+}
+.tab button:hover{
+	background-color: antiquewhite;
+}
+.tab button.active {
+	background-color: #5a6df8;
+}
+.quantity {
+	position:static;
+	float: right;
+	margin: 0;
+
+}
+.quantity button {
+	border: none;
+	cursor: pointer;
+	padding: 5px 10px;
+	margin: 25px;
+}
+.tabcontent {
+	float: right;
+	padding: 0px 12px;
+	border: 1px solid #ffffff;
+	width: 70%;
+	height: 300px;
+	margin-top: 10px;
+	color: black;
+}
+
+.form {
+	width: 100%;
+	text-align: center;
+}
+    </style>
+
+</head>
+<body>
+	<header>
+        <h1>FASTFOOD</h1>
+        <p><i>"Feel the fragrance from far away place."</i></p>
+     
+    </header>
+		
+		<div id= "nav-link">
+	
+			<nav>
+			<ul>
+				<li><a href="index.html"><h3>Home</h3></a></li>
+				<li><a href= "about.html"><h3>About</h3></a></li>
+				<li><a class="active" href= "order.html" style="color: white;"><h3>Order</h3></a></li>
+				<li><a href= "reservation.html"><h3>Reservation</h3></a></li>
+				<li><a href="news.html"><h3>News</h3></a></li>
+			</ul>
+			</nav>
+	
+	</div>
+	
+	
+
+	<h2 style="color: #280077; margin-left: 5px;">Menu</h2>
+	<form target="_self" method="post" style="margin-left: 5px;">
+		<input list="menu" name="foodsandbeverages">
+		<datalist id="menu">
+			<option value="Hamburger">
+			<option value="Cheeseburger">
+			<option value="Sandwich">
+			<option value="Muffin">
+			<option value="Burrito">
+			<option value="Cookie">
+			<option value="Taco">
+			<option value="Hotdog">
+			<option value="Fried Chicken">
+			<option value="Donuts">
+			<option value="Baguette">
+			<option value="Pizza">
+			<option value="Onion Rings">
+			<option value="Sausage">
+			<option value="Pretzel">
+			<option value="Bacon">
+			<option value="French Fries">	
+			<option value="Noodles">	
+			<option value="Coke">	
+			<option value="Sprite">	
+			<option value="Royal">
+			<option value="Pepsi">
+			<option value="Mountain Dew">
+			<option value="Milk Tea">
+			<option value="Milk Shake">
+			<option value="Buko Juice">
+		</datalist>
+	</form>
+
+	<div class="tab">
+		<button class="tablinks"><a href="#Hamburger" target="_self">Hamburger</a></button>
+		<button class="tablinks"><a href="#Cheeseburger" target="_self">Cheese Burger</a></button>
+		<button class="tablinks"><a href="#Sandwich" target="_self">Sandwich</a></button>
+		<button class="tablinks"><a href="#Muffin" target="_self">Muffin</a></button>
+		<button class="tablinks"><a href="#Burrito" target="_self">Burrito</a></button>
+		<button class="tablinks"><a href="#Cookie" target="_self">Cookie</a></button>
+		<button class="tablinks"><a href="#Hotdog" target="_self">Hotdog</a></button>
+		<button class="tablinks"><a href="#Friedchicken" target="_self">Fried Chicken</a></button>
+		<button class="tablinks"><a href="#Donuts" target="_self">Donuts</a></button>
+		<button class="tablinks"><a href="#Baguette" target="_self">Baguette</a></button>
+		<button class="tablinks"><a href="#Pizza" target="_self">Pizza</a></button>
+		<button class="tablinks"><a href="#Onionring" target="_self">Onion Ring</a></button>
+		<button class="tablinks"><a href="#Sausage" target="_self">Sausage</a></button>	
+		<button class="tablinks"><a href="#Pretzel" target="_self">Pretzel</a></button>
+		<button class="tablinks"><a href="#Bacon" target="_self">Bacon</a></button>
+		<button class="tablinks"><a href="#Fries" target="_self">French Fries</a></button>
+		<button class="tablinks"><a href="#Noodles" target="_self">Noodles</a></button>
+		<button class="tablinks"><a href="#Coke" target="_self">Coke</a></button>
+		<button class="tablinks"><a href="#Sprite" target="_self">Sprite</a></button>
+		<button class="tablinks"><a href="#Royal" target="_self">Royal</a></button>
+		<button class="tablinks"><a href="#Pepsi" target="_self">Pepsi</a></button>
+		<button class="tablinks"><a href="#Mountain Dew" target="_self">Mountain Dew</a></button>
+		<button class="tablinks"><a href="#Milktea" target="_self">Milk Tea</a></button>
+		<button class="tablinks"><a href="#Milkshake" target="_self">Milk Shake</a></button>
+		<button class="tablinks"><a href="#Bukojuice" target="_self">Buko Juice</a></button>
+	</div>
+
+	<div class="tabcontent" id="Hamburger">
+		
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱50</button>
+		</div>
+		<h2 style="margin: 0;">Hamburger</h2>
+		<img src="hamburger.png" alt="hamburger" width="200px">
+		
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div> 
+
+	<div class="tabcontent" id="Cheeseburger">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱60</button>
+		</div>
+		<h2 style="margin: 0;">Cheese Burger</h2>
+		<img src="cheeseburger.png" alt="cheeseburger" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Sandwich">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱60</button>
+		</div>
+		<h2 style="margin: 0;">Sandwich</h2>
+			<img src="sandwich.png" alt="sandwich" width="200px">
+			<div class="quantity">
+				<button class="decrement">-</button>
+				<span class="count">0</span>
+				<button class="increment">+</button>
+	
+			</div>
+	</div>
+
+	<div class="tabcontent" id="Muffin">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱40</button>
+		</div>
+		<h2 style="margin: 0;">Muffin</h2>
+		<img src="muffin.png" alt="muffin" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Burrito">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱70</button>
+		</div>
+		<h2 style="margin: 0;">Burrito</h2>
+			<img src="burrito.png" alt="burrito" width="200px">
+			<div class="quantity">
+				<button class="decrement">-</button>
+				<span class="count">0</span>
+				<button class="increment">+</button>
+	
+			</div>
+	</div>
+
+	<div class="tabcontent" id="Cookie">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱20</button>
+		</div>
+		<h2 style="margin: 0;">Cookie</h2>
+			<img src="cookie.png" width="200px">
+			<div class="quantity">
+				<button class="decrement">-</button>
+				<span class="count">0</span>
+				<button class="increment">+</button>
+	
+			</div>
+	</div>
+
+	<div class="tabcontent" id="Hotdog">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱30</button>
+		</div>
+		<h2 style="margin: 0;">Hotdog</h2>
+		<img src="hotdog.png" alt="hotdog" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Friedchicken"><div class="prices">
+		<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱80</button>
+	</div>
+		<h2 style="margin: 0;">Fried Chicken</h2>
+		<img src="fried chicken.png" alt="Fried Chicken" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Donuts">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱20</button>
+		</div>
+		<h2 style="margin: 0;">Donuts</h2>
+		<img src="donuts.png" alt="Donuts" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Baguette">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱40</button>
+		</div>
+		<h2 style="margin: 0;">Baguette</h2>
+		<img src="baguette.png" alt="Baguette" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Pizza">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱100</button>
+		</div>
+		<h2 style="margin: 0;">Pizza</h2>
+		<img src="pizza.png" alt="Pizza" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Onionring">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱40</button>
+		</div>
+		<h2 style="margin: 0;">Onion Rings</h2>
+		<img src="onion ring.png" alt="Onion Rings" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Sausage">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱30</button>
+		</div>
+		<h2 style="margin: 0;">Sausage</h2>
+		<img src="sausage.png" alt="Sausage" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Pretzel">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱30</button>
+		</div>
+		<h2 style="margin: 0;">Pretzel</h2>
+		<img src="pretzel.png" alt="Pretzel" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Bacon">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱80</button>
+		</div>
+		<h2 style="margin: 0;">Bacon</h2>
+		<img src="bacon.png" alt="Bacon" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Fries">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱50</button>
+		</div>
+		<h2 style="margin: 0;">French Fries</h2>
+		<img src="fries.png" alt="French Fries" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Noodles">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱50</button>
+		</div>
+		<h2 style="margin: 0;">Noodles</h2>
+		<img src="noodle.png" alt="Noodles" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Coke">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱20</button>
+		</div>
+		<h2 style="margin: 0;">Coke</h2>
+		<img src="coke.png" alt="Coke" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Sprite">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱20</button>
+		</div>
+		<h2 style="margin: 0;">Sprite</h2>
+		<img src="sprite.png" alt="Sprite" width="130px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Royal">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱20</button>
+		</div>
+		<h2 style="margin: 0;">Royal</h2>
+		<img src="royal.png" alt="Royal" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Pepsi">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱20</button>
+		</div>
+		<h2 style="margin: 0;">Pepsi</h2>
+		<img src="pepsi.png" alt="Pepsi" width="150px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Mountain Dew">
+		<div class="prices">
+			<button style="border: none;padding: 8px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱20</button>
+		</div>
+		<h2 style="margin: 0 ;">Mountain Dew</h2>
+		<img src="mountain dew.png" alt="Mountain Dew" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Milktea">
+		<div class="prices">
+			<button style="border: none;padding: 8px 20px; font-size: 15px; color: black; border-radius: 4px; margin-left: 50%;">₱100</button>
+		</div>
+		<h2 style="margin: 0;">Milk Tea</h2>
+		<img src="milk tea.png" alt="Milk Tea" width="150px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Milkshake">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 4px; margin-left: 50%;">₱150</button>
+		</div>
+		<h2 style="margin: 0;">Milk Shake</h2>
+		<img src="milk shake -.png" alt="Milk Shake" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<div class="tabcontent" id="Bukojuice">
+		<div class="prices">
+			<button style="border: none;padding: 10px 20px; font-size: 16px; color: black; border-radius: 3px; margin-left: 50%;">₱200</button>
+		</div>
+		<h2 style="margin: 0;">Buko Juice</h2>
+		<img src="buko juice.png" alt="Buko Juice" width="200px">
+		<div class="quantity">
+			<button class="decrement">-</button>
+			<span class="count">0</span>
+			<button class="increment">+</button>
+
+		</div>
+	</div>
+
+	<script>
+		const decrementButtons = document.querySelectorAll('.decrement');
+		const incrementButtons = document.querySelectorAll('.increment');
+		const countElements = document.querySelectorAll('.count');
+
+		decrementButtons.forEach((button, index) => {
+			button.addEventListener('click', () => {
+				const count = parseInt(countElements[index]. innerText);
+				if (count > 0) {
+					countElements[index].innerText = count - 1;
+				}
+			});
+		});
+
+		incrementButtons.forEach((button, index) => {
+			button.addEventListener('click', () => {
+				const count = parseInt(countElements[index].innerText);
+				countElements[index].innerText = count + 1;
+			})
+		});
+
+		
+	</script>
+</body>
+</html>

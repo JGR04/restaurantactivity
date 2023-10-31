@@ -1,0 +1,223 @@
+<html>
+    
+<head>
+    <title>News</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+	
+ *{
+    box-sizing: border-box;
+ }     
+ header{
+    text-align: center;
+    margin: 40px;
+    font-size: 40px;
+    font-family: Georgia;
+    color: #ffffff;
+    border: 3px solid;
+}
+  
+ #nav-link{
+	text-align: center;
+	border-radius: 10px;
+}
+#nav-link ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+	overflow: hidden;
+	background-color: rgb(202, 230, 246);
+}
+
+#nav-link li{
+	float: left;
+}
+#nav-link li a{
+	display: block;
+	color: blue;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border-radius: 10px;
+}
+#nav-link li a:hover:not(.active){
+	background-color: #280077;
+	color: white;
+}
+.active{
+	background-color: #5a6df8;
+}
+.users-comments{
+	margin: 20px;
+	padding: 5px;
+	background-color: aquamarine;
+	border-radius: 20px;
+}
+.updates {
+	margin: 20px;
+	padding:5px;
+	background-color: white;
+	border-radius: 20px;
+}
+.users-comments, .users{
+	margin: 20px;
+	padding: 5px;
+}
+.users{
+	background: skyblue;
+}
+.users, p{
+	margin: 20px;
+	font-size: 90%;
+	border-radius: 20px;
+}
+body{
+	background: skyblue;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-size: large;
+}
+input {
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: 12px 20px;
+	margin: 8px;
+	display: inline-block;
+	box-sizing: border-box;
+	font-style: italic;
+}
+.input[type=text], select, textarea{
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #5a6df8;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+input[type=submit]{
+	background-color: blue;
+	color: white;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	border-radius: 20px;
+}
+input[type=submit]:hover{
+	background-color: #280077;
+}
+.message{
+	border-radius: 20px;
+	padding: 5px;
+	background-color: lightblue;
+	margin: 20px;
+	display: block;
+}
+.ratings {
+	margin: 20px;
+	padding: 5px;
+	background-color: #5a6df8;
+	border-radius: 20px;
+}
+.demo{
+	margin: 20px;
+	text-align: right;
+}
+button[type=time]{
+	border: none;
+	cursor: pointer;
+	border-radius: 30px;
+	padding: 10px;
+	background-color: #5a6df8;
+}
+
+</style>
+
+
+</head>
+<body>
+	<header>
+        <h1>FASTFOOD</h1>
+        <p><i>"Feel the fragrance from far away place."</i></p>
+     
+    </header>
+		<div id= "nav-link">
+	
+			<nav>
+			<ul>
+				<li><a href="index.html"><h3>Home</h3></a></li>
+				<li><a href= "about.html"><h3>About</h3></a></li>
+				<li><a href= "order.html"><h3>Order</h3></a></li>
+				<li><a href= "reservation.html"><h3>Reservation</h3></a></li>
+				<li><a class="active" href="news.html" style="color: white;"><h3>News</h3></a></li>
+			</ul>
+			</nav>
+	
+	</div>
+
+	
+	<div class="demo">
+	<button onclick="this.innerHTML = Date()" type="time">Time</button>
+	</div>
+
+    <h1 class="updates">Announcements:</h1>
+
+<article class="users-comments">
+	<h1 style="margin-left: 30px;">Remarks</h1>
+
+	<article class="users">
+			<h2>User_Anonymous001:</h2>
+			<p>This is one of the best food I've ever had using internet as a medium of communication.</p>
+		</article>
+
+	<article class="users">
+			<h2>User_Anonymous002:</h2>
+			<p>Wow! A great e-commerce and hassle-free. Try this delicious delicacies.</p>
+		</article>
+
+	<article class="users">
+			<h2>User_Anonymous003:</h2>
+			<p>I recommend it to everyone to try this site and taste the best dish ever.</p>
+	</article>
+</article>
+
+<div class="message">
+	<h2>Contact Us</h2>
+<section>
+	<div class="avatar">
+		<div class="avataricon">
+			<img src="icons8-person-female-64.png" alt="user1">
+			<form action="#">
+				<label for="fname">First Name</label><br>
+				<input class="text" id="fname" name="firstname" placeholder="Enter your first name."><br>
+				<label for="lname">Last Name</label><br>
+				<input class="text" id="lname" name="lname" placeholder="Enter your last name."><br>
+
+				<label for="barangay">Barangay</label>
+				<select name="barangay" id="barangay">
+					<option value="ampayon">Ampayon</option>
+					<option value="antongalon">Antongalon</option>
+					<option value="basag">Basag</option>
+					<option value="camayahan">Camayahan</option>
+					<option value="de oro">De Oro</option>
+					<option value="libertad">Libertad</option>
+					<option value="lemon">Lemon</option>
+					<option value="mahay">Mahay</option>
+					<option value="pigdaulan">Pigdaulan</option>
+					<option value="taligaman">Taligaman</option>
+				</select>
+
+				<label for="subject">Subject</label>
+				<textarea name="subject" id="subject" placeholder="Any suggestions or recommendations..." ></textarea>
+				<input type="submit" value="Submit">
+			</form>
+
+		</div>
+
+	</div>
+</div>
+</section>
+
+
+</body>
+</html>
